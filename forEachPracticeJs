@@ -1,0 +1,81 @@
+// 1
+let arr = [2, -8, 53, 500, -7, 86, 74, -9, 3];
+
+arr.forEach((el) => {
+  console.log(el);
+});
+
+
+// 2
+let newArr = [];
+
+arr.forEach((el) => {
+  let newEl = el * 8;
+  newArr.push(newEl);
+});
+
+console.log(newArr);
+
+
+// 3
+let positiveArr = [];
+
+arr.forEach((el) => {
+  if(el>0){
+    positiveArr.push(el);
+  }
+});
+
+console.log(positiveArr);
+
+
+// 4
+let arrNextInd = [];
+
+arr.forEach((el, ind) => {
+  if(ind + 1 < arr.length){
+    let newEl = arr[ind + 1];
+    arrNextInd.push(newEl);
+  }
+});
+
+console.log(arrNextInd);
+
+
+// 5
+let maxEl = arr[0];
+
+arr.forEach((el, ind) => {
+  if(maxEl < arr[ind]){
+    maxEl = arr[ind];
+  }
+});
+
+console.log(maxEl);
+
+
+// 6
+let arrOfObjects = [
+  {
+    name: "Steve",
+    surname: "Ken"
+  },
+  {
+    name: "Sally",
+    surname: "Kennedy"
+  },
+  {
+    name: "Polina",
+    surname: "Sheremed"
+  }
+];
+
+let arrName = [];
+let arrSurname = [];
+
+arrOfObjects.forEach((el) => {
+  arrName.push(el.name);
+  arrSurname.push(el.surname);
+});
+
+console.log(`Array of names: ${arrName}\nArray of surnames: ${arrSurname}`);
